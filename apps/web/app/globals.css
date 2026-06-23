@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-gold: #c8a96e;
+  --brand-gold-hover: #d8b97e;
+  --brand-purple: #9e6ec8;
+  --brand-blue: #6e9ec8;
+  --brand-dark: #0d0f14;
+  --brand-bg: #0d0f14;
+  --brand-surface: #1a1c24;
+  --brand-surface2: #20232e;
+  --brand-surface-hover: #20232e;
+  --brand-border: #2a2d38;
+  --brand-border-hover: #3a3d4a;
+  --brand-text: #e8e0d0;
+  --brand-text-muted: #888880;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--brand-dark);
+  color: var(--brand-text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--brand-dark); }
+::-webkit-scrollbar-thumb { background: var(--brand-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3d4a; }
+
+/* Output screen: never show scrollbars */
+.output-screen { overflow: hidden; }
+
+/* Lyric safe area */
+.lyric-safe { padding: 5%; }
+
+/* Transitions */
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--brand-border);
+  border-radius: 10px;
+}
+
+/* Live indicator pulse */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.live-dot { animation: livePulse 1.5s infinite; }
