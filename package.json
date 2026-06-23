@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cd apps/web && node server.js dev",
-    "build": "cd apps/web && npx next build",
+    "build": "cd apps/web && npm install && npx next build",
     "start": "cd apps/web && node server.js",
     "install:all": "npm install && cd apps/web && npm install"
   },
